@@ -19,6 +19,7 @@
         "sourceType": "module"
     },
     "rules": {
+        "import/prefer-default-export": "off",
         "import/no-unresolved": "error",
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": "off",
