@@ -1,63 +1,94 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 import BackgrundImg from "../../assets/background.png";
 
 export const HomeContainer = styled.div`
-    width: 100%;
-    height: 1080px;
     background: url(${BackgrundImg});
-    background-position: 0px -50px;
+    height: 100vh;
     background-size: cover;
+    background-position: center;
+    position: relative;
 `;
 
 export const Navbar = styled.nav`
-    height: 80px;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    line-height: 24px;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-`;
-
-export const NavbarContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    max-width: 1500px;
+    width: 100%;
+    margin: auto;
 `;
 
 export const LogoMenu = styled.div`
-    justify-self: start;
-    margin-left: 123px;
-    margin-top: 60px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+    width: 226px;
+    float: left;
+    height: auto;
+    margin-top: 40px;
+    margin-left: 125px;
 `;
 
 export const NavMenu = styled.ul`
-    display: flex;
-
-    list-style: none;
-    text-align: center;
-    width: 600px;
-    height: 24px;
-    justify-content: end;
+    float: right;
+    margin-top: 60px;
+    margin-right: 350px;
 `;
 
-export const NavItem = styled.li``;
+export const NavItem = styled.li`
+    display: inline-block;
+`;
+
+export const Item = styled.a`
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px 20px;
+    font-size: 14px;
+    list-style: none;
+`;
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+
+    &:focus,
+    &:hover,
+    &:visited,
+    &:link,
+    &:active {
+        text-decoration: none;
+    }
+`;
+
+export const Content = styled.div`
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-left: 460px;
+    margin-top: 250px;
+`;
+export const Title = styled.h1`
+    display: block;
+    width: 832px;
+    font-size: 72px;
+    color: #fff;
+`;
+
+export const Subtitle = styled.h3`
+    display: block;
+    width: 670px;
+    font-weight: 400;
+    font-size: 26px;
+    color: #fff;
+    margin-top: 25px;
+    opacity: 80%;
+`;
 
 export const Button = styled.button`
-    width: 280px;
-    height: 77px;
-    padding: 8px 20px;
-    border-radius: 8px;
-    outline: none;
-    border: none;
-    cursor: pointer;
+    display: inline-block;
+    padding: 25px 45px;
     background-color: #fff;
+    border-radius: 8px;
+    margin-top: 65px;
+`;
+
+export const ButtonContent = styled.a`
     color: #8736f2;
+    font-size: 24px;
+    font-weight: 600;
 `;
