@@ -1,78 +1,65 @@
 import { Link } from "react-router-dom";
-import {
-    HomeContainer,
-    Navbar,
-    LogoMenu,
-    NavMenu,
-    NavItem,
-    Button,
-    Content,
-    Title,
-    Subtitle,
-    Item,
-    StyledLink,
-    ButtonContent,
-} from "./styles";
+import * as S from "./styles";
 
 import ImgLogo from "../../assets/logo.png";
 
 const Home = () => {
     return (
-        <HomeContainer>
-            <Navbar>
-                <LogoMenu>
+        <S.HomeContainer>
+            <nav>
+                <S.LogoMenu>
                     <Link to="/home">
                         <img src={ImgLogo} alt="logo" />
                     </Link>
-                </LogoMenu>
+                </S.LogoMenu>
 
-                <NavMenu>
-                    <NavItem>
-                        <StyledLink to="/home">
-                            <Item>Home</Item>
-                        </StyledLink>
-                    </NavItem>
+                <ul>
+                    <li>
+                        <S.StyledLink to="/home">
+                            <p>Home</p>
+                        </S.StyledLink>
+                    </li>
 
-                    <NavItem>
-                        <StyledLink to="/home">
-                            <Item>Serviços</Item>
-                        </StyledLink>
-                    </NavItem>
+                    <li>
+                        <S.StyledLink to="/home">
+                            <p>Serviços</p>
+                        </S.StyledLink>
+                    </li>
 
-                    <NavItem>
-                        <StyledLink to="/home">
-                            <Item>Sobre nós</Item>
-                        </StyledLink>
-                    </NavItem>
+                    <li>
+                        <S.StyledLink to="/home">
+                            <p>Sobre nós</p>
+                        </S.StyledLink>
+                    </li>
 
-                    <NavItem>
-                        <StyledLink to="/home">
-                            <Item>FAQ</Item>
-                        </StyledLink>
-                    </NavItem>
+                    <li>
+                        <S.StyledLink to="/home">
+                            <p>FAQ</p>
+                        </S.StyledLink>
+                    </li>
 
-                    <NavItem>
-                        <StyledLink to="/home">
-                            <Item>Login</Item>
-                        </StyledLink>
-                    </NavItem>
-                </NavMenu>
-            </Navbar>
-            <Content>
-                <Title>Empreendendo juntos, todos os dias.</Title>
-                <Subtitle>
+                    <li>
+                        <S.StyledLink to="/home">
+                            <p>Login</p>
+                        </S.StyledLink>
+                    </li>
+                </ul>
+            </nav>
+            <S.Content>
+                <h1>Empreendendo juntos, todos os dias.</h1>
+                <h3>
                     Softwares de gestão para administração de condomínios,
                     imobiliárias, escolas e negócios que cobram assinaturas e
                     pagamentos recorrentes.
-                </Subtitle>
+                </h3>
 
-                <Button>
-                    <StyledLink to="/home">
-                        <ButtonContent>Assine um plano</ButtonContent>
-                    </StyledLink>
-                </Button>
-            </Content>
-        </HomeContainer>
+                <S.Button>
+                    <S.StyledLink to="/home">
+                        <p>Assine um plano</p>
+                    </S.StyledLink>
+                </S.Button>
+            </S.Content>
+        </S.HomeContainer>
     );
 };
 
